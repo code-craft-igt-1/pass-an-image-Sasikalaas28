@@ -1,5 +1,8 @@
 #pragma once
 #include <cstdint>
+#include <memory>
+using std::move;
+using std::unique_ptr;
 
 struct Image {
 	int rows;
@@ -9,9 +12,9 @@ struct Image {
 
 class ImageBrightener {
 private:
-	Image m_inputImage;
+	unique_ptr<Image> m_inputImage;
 public:
-	ImageBrightener(Image& inputImage);
+	ImageBrightener(unique_ptr<Image>& inputImage);
 	int BrightenWholeImage();
-	Image GetImage();
+	unique_ptr<Image>& GetImage();
 };
