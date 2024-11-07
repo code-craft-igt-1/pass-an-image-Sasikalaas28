@@ -16,5 +16,5 @@ private:
 public:
 	ImageBrightener(unique_ptr<Image>& inputImage);
 	int BrightenWholeImage();
-	unique_ptr<Image>& GetImage();
+	unique_ptr<Image> GetImage();
 };

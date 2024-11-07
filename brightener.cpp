@@ -27,6 +27,6 @@ int ImageBrightener::BrightenWholeImage() {
 	return attenuatedPixelCount;
 }
 
-unique_ptr<Image>& ImageBrightener::GetImage() {
-	return m_inputImage;
+unique_ptr<Image> ImageBrightener::GetImage() {
+	return move(m_inputImage);
 }

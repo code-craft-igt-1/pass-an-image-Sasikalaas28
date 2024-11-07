@@ -3,7 +3,7 @@
 
 
 int main() {
-    unique_ptr<Image> image = unique_ptr<Image> (new Image);
+    unique_ptr<Image> image = unique_ptr<Image>(new Image);
     image->rows = 512;
     image->columns = 512;
 	std::cout << "Brightening a 512 x 512 image\n";
